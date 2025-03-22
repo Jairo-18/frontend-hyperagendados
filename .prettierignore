@@ -1,0 +1,22 @@
+# Node.js y dependencias
+node_modules/
+dist/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Archivos de compilación
+*.min.js
+*.map
+*.d.ts
+
+# Configuración del entorno
+.env
+*.local
+
+# Angular
+.angular/
+coverage/
+
+# JSON de ESLint (para evitar que Prettier lo formatee)
+.eslintrc.cjs
