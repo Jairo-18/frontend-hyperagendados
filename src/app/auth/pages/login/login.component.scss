@@ -1,0 +1,8 @@
+.bg-image {
+  background-image: url('../../../../assets/images/descarga.jfif');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100% !important; /* Usa el 100% de la altura de la pantalla */
+  width: 100% !important; /* Usa el 100% del ancho */
+}

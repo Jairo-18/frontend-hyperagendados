@@ -1,8 +1,8 @@
 // @ts-check
-const eslint = require('@eslint/js')
-const tseslint = require('typescript-eslint')
-const angular = require('angular-eslint')
-const prettier = require('eslint-config-prettier')
+const eslint = require('@eslint/js');
+const tseslint = require('typescript-eslint');
+const angular = require('angular-eslint');
+const prettier = require('eslint-config-prettier');
 
 module.exports = tseslint.config(
   {
@@ -17,12 +17,9 @@ module.exports = tseslint.config(
     processor: angular.processInlineTemplates,
     rules: {
       // Estilos y convenciones
-      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_' },
-      ],
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 
       // Reglas específicas de Angular
       '@angular-eslint/directive-selector': [
@@ -36,7 +33,7 @@ module.exports = tseslint.config(
 
       // Reglas generales
       quotes: ['error', 'single'],
-      semi: ['error', 'never'],
+      semi: ['error', 'always'],
       'comma-dangle': ['error', 'always-multiline'],
       'object-curly-spacing': ['error', 'always'],
     },
@@ -50,4 +47,4 @@ module.exports = tseslint.config(
     ],
     rules: {},
   }
-)
+);
