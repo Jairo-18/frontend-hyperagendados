@@ -1,6 +1,7 @@
-<article class=" ">
-  <section class="flex flex-col p-10">
-    <span>HYPERAGENDADOS</span><span>Bienvenido</span>
+<article class="bg-image">
+  <section class="flex flex-col text-center p-10 rounded-lg border bg-white border-gray-800">
+    <span class="text-2xl font-extrabold">HYPERAGENDADOS</span
+    ><span class="text-lg text-gray-500">Bienvenido</span>
     <form [formGroup]="form" class="flex flex-col w-full items-center mt-2.5 gap-1.5">
       <mat-form-field appearance="outline" class="w-full">
         <mat-label>Nombre de usuario</mat-label>
@@ -23,22 +24,22 @@
         </mat-error>
       </mat-form-field>
 
-      <div class="flex w-[80%] content-between items-center justify-center gap-5 my-2.5">
-        <button mat-fab extended="true" (click)="login()">
-          <span class="text-md">Iniciar Sesión</span>
+      <div class="flex text-lg font-medium">
+        <button class="bg-blue-800 hover:text-blue-400 rounded-full p-2" (click)="login()">
+          Iniciar sesión
         </button>
       </div>
 
       <a
         routerLink="/auth/recovery-password"
-        class="cursor-pointer text-blue-400 hover:text-blue-800 hover-underline-animation"
+        class="cursor-pointer text-blue-800 hover:text-blue-400 hover-underline-animation"
         >¿Olvidaste tu contraseña?</a
       >
       <span
         >¿No tienes una cuenta?
         <a
           routerLink="/auth/register"
-          class="cursor-pointer text-blue-400 hover:text-blue-800 hover-underline-animation"
+          class="cursor-pointer text-blue-800 hover:text-blue-400 hover-underline-animation"
           >Registrarse</a
         ></span
       >

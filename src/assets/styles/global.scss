@@ -12,6 +12,7 @@
 .footer {
   width: 100%;
   bottom: 0;
+  position: fixed;
   z-index: 1000;
   left: 0;
   height: $heigth-footer;
@@ -24,15 +25,17 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-  padding-top: calc($heigth-nav-bar);
+
   color: white;
 }
 
 .main {
-  padding-top: $heigth-nav-bar;
   display: flex;
   width: 100%;
+  margin-top: $heigth-nav-bar !important;
+  padding-bottom: $heigth-footer !important;
   justify-content: center;
   align-items: center;
+
   color: black;
 }
