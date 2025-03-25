@@ -6,7 +6,8 @@
   top: 0;
   left: 0;
   width: 100vw; /* Ocupa todo el ancho de la pantalla */
-  min-height: 100%; /* Ocupa toda la altura de la pantalla */
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+
   display: flex;
   justify-content: center;
   align-items: center;
