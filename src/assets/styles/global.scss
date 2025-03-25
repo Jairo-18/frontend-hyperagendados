@@ -1,5 +1,6 @@
 @use 'variables.scss' as *;
 
+// CSS de navbar
 .nav {
   position: fixed;
   top: 0;
@@ -9,33 +10,50 @@
   background-color: $header-background;
 }
 
+// CSS de footer
 .footer {
+  display: flex;
+
   width: 100%;
-  bottom: 0;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  height: $heigth-footer;
+  min-height: $heigth-footer;
   background-color: $footer-background;
 }
 
 .app-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
-
-  color: white;
+  padding-top: $heigth-nav-bar;
+  // padding-bottom: $heigth-footer;
 }
 
+// Clase donde se renderiza contenido
 .main {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-top: $heigth-nav-bar !important;
-  padding-bottom: $heigth-footer !important;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thick;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+// Centra navbar y footer
+.brand-navigation-center {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
   justify-content: center;
   align-items: center;
+}
 
-  color: black;
+// Centra contenido en general
+.brand-content-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
 }
