@@ -1,6 +1,6 @@
 # Node.js y dependencias
 node_modules/
-dist/
+ 
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
