@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router'
+import { Routes } from '@angular/router';
 
 export const authRoutes: Routes = [
   {
@@ -13,6 +13,14 @@ export const authRoutes: Routes = [
         loadComponent: () =>
           import('./pages/register/register.component').then((m) => m.RegisterComponent),
       },
+      {
+        path: 'recovery-password',
+        loadComponent: () =>
+          import('./pages/recovery-password/recovery-password.component').then(
+            // eslint-disable-next-line comma-dangle
+            (m) => m.RecoveryPasswordComponent
+          ),
+      },
     ],
   },
-]
+];

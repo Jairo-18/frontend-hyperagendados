@@ -1,5 +1,5 @@
-import { Routes } from '@angular/router'
-import { DefaultLayoutComponent } from './layout/default-layout/default-layout/default-layout.component'
+import { Routes } from '@angular/router';
+import { DefaultLayoutComponent } from './layout/default-layout/default-layout/default-layout.component';
 
 export const routes: Routes = [
   {
@@ -20,8 +20,17 @@ export const routes: Routes = [
         loadChildren: () => import('./auth/auth.routes').then((m) => m.authRoutes),
       },
       {
+        path: 'organizational',
+        loadChildren: () =>
+          import('./organizational/organizational.routes').then((m) => m.organizationalRoutes),
+      },
+      {
         path: 'public',
         loadChildren: () => import('./public/public.routes').then((m) => m.publicRoutes),
+      },
+      {
+        path: 'user',
+        loadChildren: () => import('./user/user.routes').then((m) => m.userRoutes),
       },
     ],
   },
@@ -30,4 +39,4 @@ export const routes: Routes = [
     path: '**',
     redirectTo: '/home',
   },
-]
+];
