@@ -1,10 +1,46 @@
 <nav class="nav">
-  <article class="brand-navigation-center px-5">
-    <section class="flex w-[50%] justify-start items-center"><span>HYPERAGENDADOS</span></section>
-    <section class="flex w-[50%] justify-start items-center">
-      <a class="w-[33%]" routerLink="/">Inicio</a>
-      <a class="w-[33%]" routerLink="/public/about">Sobre nosotros</a>
-      <a class="w-[33%]" routerLink="/auth/login">Iniciar sesión</a>
-    </section>
+  <article class="brand-navigation-center px-[5%]">
+    <div class="hidden md:flex content-between w-full gap-[2%]">
+      <section class="flex w-[25%] justify-center items-center">
+        <span>HYPERAGENDADOS</span>
+      </section>
+      <section class="flex w-[50%] justify-center items-center text-center">
+        <a class="w-[33%]" routerLink="/">Inicio</a>
+        <a class="w-[33%]" routerLink="/public/about">Agendar cita</a>
+        <a class="w-[33%]" routerLink="/public/about">¿Cómo funciona?</a>
+      </section>
+      <section class="flex w-[25%] justify-center items-center">
+        <a class=" " routerLink="/auth/login">Iniciar sesión</a>
+      </section>
+    </div>
+    <div class="flex sm:hidden justify-end w-full">
+      <button [matMenuTriggerFor]="mobileMenu" class="text-gray-300 text-xl px-[4vw]">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #mobileMenu="matMenu">
+        <a
+          routerLink="/home"
+          mat-menu-item
+          class="flex justify-center items-center"
+          (click)="menuClose()"
+          ><mat-icon>home</mat-icon>Inicio</a
+        >
+        <a
+          routerLink="/public/about"
+          mat-menu-item
+          class="flex justify-center items-center"
+          (click)="menuClose()"
+          ><mat-icon>person_pin</mat-icon>Sobre Nosotros</a
+        >
+
+        <a
+          routerLink="/auth/login"
+          mat-menu-item
+          class="flex justify-center items-center"
+          (click)="menuClose()"
+          ><mat-icon>login</mat-icon>Iniciar Sesión</a
+        >
+      </mat-menu>
+    </div>
   </article>
 </nav>

@@ -1,48 +1,50 @@
-<article class="bg-image">
-  <section class="flex flex-col text-center p-10 rounded-lg border bg-white border-gray-800">
-    <span class="text-2xl font-extrabold">HYPERAGENDADOS</span
-    ><span class="text-lg text-gray-500">Bienvenido</span>
-    <form [formGroup]="form" class="flex flex-col w-full items-center mt-2.5 gap-1.5">
-      <mat-form-field appearance="outline" class="w-full">
-        <mat-label>Nombre de usuario</mat-label>
-        <mat-icon matPrefix>account_circle</mat-icon>
-        <input matInput formControlName="username" />
-        <mat-error *ngIf="form.get('username')?.hasError('required')">
-          Nombre de usuario requerido
-        </mat-error>
-      </mat-form-field>
+<article class="brand-content-center">
+  <div class="flex h-full w-full justify-center items-center">
+    <section class="flex flex-col text-center p-10 rounded-lg border bg-white border-gray-800">
+      <span class="text-2xl font-extrabold">HYPERAGENDADOS</span
+      ><span class="text-lg text-gray-500">Bienvenido</span>
+      <form [formGroup]="form" class="flex flex-col w-full items-center mt-2.5 gap-1.5">
+        <mat-form-field appearance="outline" class="w-full">
+          <mat-label>Nombre de usuario</mat-label>
+          <mat-icon matPrefix>account_circle</mat-icon>
+          <input matInput formControlName="username" />
+          <mat-error *ngIf="form.get('username')?.hasError('required')">
+            Nombre de usuario requerido
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field appearance="outline" class="w-full">
-        <mat-label>Contraseña</mat-label>
-        <mat-icon matPrefix>lock</mat-icon>
-        <input [type]="showPassword ? 'text' : 'password'" matInput formControlName="password" />
-        <button matSuffix mat-icon-button (click)="showPassword = !showPassword" class="mr-1">
-          <fa-icon [icon]="showPassword ? eyeOpen : eyeClose"></fa-icon>
-        </button>
-        <mat-error *ngIf="form.get('password')?.hasError('required')">
-          Contraseña requerida
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field appearance="outline" class="w-full">
+          <mat-label>Contraseña</mat-label>
+          <mat-icon matPrefix>lock</mat-icon>
+          <input [type]="showPassword ? 'text' : 'password'" matInput formControlName="password" />
+          <button matSuffix mat-icon-button (click)="showPassword = !showPassword" class="mr-1">
+            <fa-icon [icon]="showPassword ? eyeOpen : eyeClose"></fa-icon>
+          </button>
+          <mat-error *ngIf="form.get('password')?.hasError('required')">
+            Contraseña requerida
+          </mat-error>
+        </mat-form-field>
 
-      <div class="flex text-lg font-medium">
-        <button class="bg-blue-800 hover:text-blue-400 rounded-full p-2" (click)="login()">
-          Iniciar sesión
-        </button>
-      </div>
+        <div class="flex text-lg font-medium">
+          <button class="bg-blue-800 hover:text-blue-400 rounded-full p-2" (click)="login()">
+            Iniciar sesión
+          </button>
+        </div>
 
-      <a
-        routerLink="/auth/recovery-password"
-        class="cursor-pointer text-blue-800 hover:text-blue-400 hover-underline-animation"
-        >¿Olvidaste tu contraseña?</a
-      >
-      <span
-        >¿No tienes una cuenta?
         <a
-          routerLink="/auth/register"
+          routerLink="/auth/recovery-password"
           class="cursor-pointer text-blue-800 hover:text-blue-400 hover-underline-animation"
-          >Registrarse</a
-        ></span
-      >
-    </form>
-  </section>
+          >¿Olvidaste tu contraseña?</a
+        >
+        <span
+          >¿No tienes una cuenta?
+          <a
+            routerLink="/auth/register"
+            class="cursor-pointer text-blue-800 hover:text-blue-400 hover-underline-animation"
+            >Registrarse</a
+          ></span
+        >
+      </form>
+    </section>
+  </div>
 </article>

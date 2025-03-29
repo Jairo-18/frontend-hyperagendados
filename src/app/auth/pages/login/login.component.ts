@@ -32,7 +32,6 @@ export class LoginComponent {
   showPassword: boolean = false;
 
   constructor(private _fb: FormBuilder) {
-    // Corregí FormGroupBuilder -> FormBuilder
     this.form = this._fb.group({
       username: ['', [Validators.required]],
       password: ['', [Validators.required]],

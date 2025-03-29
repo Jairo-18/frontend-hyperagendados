@@ -12,9 +12,13 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 body {
   min-height: 100dvh;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+// :app-root {
+//   min-height: 100%;
+// }
