@@ -33,7 +33,7 @@ export class LoginComponent {
 
   constructor(private _fb: FormBuilder) {
     this.form = this._fb.group({
-      username: ['', [Validators.required]],
+      numberType: ['', [Validators.required]],
       password: ['', [Validators.required]],
     });
   }
